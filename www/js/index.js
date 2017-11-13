@@ -56,7 +56,12 @@ $(document).on("pagecreate","#pageone",function(){
   });            
 });  
 
-shake.startWatch(magic8ball(), 40);
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    shake.startWatch(magic8ball(),);
+}
+
 
 function magic8ball(){
     var q = $('#questionText').val();
