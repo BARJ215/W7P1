@@ -8,13 +8,13 @@ $(document).on("pagecreate","#pageone",function(){
       m = random();
       $('#rn').text(m);
       console.log(m);
-      navigator.vibrate(200);
-      navigator.notification.beep(1);
-      //if(m==true){
-        //navigator.notification.beep();
-      //}else{
-        //navigator.notification.beep();  
-      //}
+      if(m==true){
+        navigator.notification.beep(1);
+        navigator.vibrate(200);
+      }else{
+        navigator.notification.beep(2);
+        navigator.vibrate([200,200,200]);
+      }
   });            
 });            
 
