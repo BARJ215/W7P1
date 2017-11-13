@@ -26,7 +26,7 @@ var a = [
     "Outlook not so good",
     "Very doubtful"  
 ];
-var a.outlook =[
+var a_outlook =[
     1,
     1,
     1,
@@ -55,10 +55,10 @@ $(document).on("pagecreate","#pageone",function(){
       var q = $('#questionText').val();
       r= random();
       navigator.notification.alert(a[r]);
-      if(a.outlook[r]>0){
+      if(a_outlook[r]>0){
           //good
           navigator.notification.beep(1);
-      }else if(a.outlook[r]<0){
+      }else if(a_outlook[r]<0){
           //bad
           navigator.vibrate(200);
       }else{
