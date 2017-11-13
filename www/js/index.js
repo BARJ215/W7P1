@@ -1,7 +1,6 @@
 
 <!-- For more info on jQuery Mobile,  touch gestures and other useful events see : http://api.jquerymobile.com/category/events/ -->
 
-
 var m;
 
 $(document).on("pagecreate","#pageone",function(){
