@@ -59,7 +59,7 @@ $(document).on("pagecreate","#pageone",function(){
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    shake.startWatch(magic8ball,40);
+    shake.startWatch(magic8ball(),40);
 }
 
 
