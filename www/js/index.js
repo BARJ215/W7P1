@@ -5,6 +5,7 @@ var m;
 $(document).on("pagecreate","#pageone",function(){
   $('#rnButton').on("click", function(){
       m = random();
+      $('#rn').text(m);
       console.log(m);
   });            
 });            
