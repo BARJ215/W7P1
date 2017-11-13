@@ -8,7 +8,7 @@ $(document).on("pagecreate","#pageone",function(){
       m = random();
       $('#rn').text(m);
       console.log(m);
-      navigator.vibrate(2000);
+      navigator.vibrate(200);
       
       if(m==true){
         //navigator.notification.beep(1); 
