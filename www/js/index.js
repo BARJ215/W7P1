@@ -52,23 +52,28 @@ var a_outlook =[
 
 $(document).on("pagecreate","#pageone",function(){
   $('#submitButton').on("click", function(){
-      var q = $('#questionText').val();
-      r= random();
-      navigator.notification.alert(a[r]);
-      if(a_outlook[r]>0){
-          //good
-          navigator.notification.beep(1);
-      }else if(a_outlook[r]<0){
-          //bad
-          navigator.vibrate(200);
-      }else{
-          //neutral
-          navigator.notification.beep(1);
-          navigator.vibrate(200);
-      }
-      
+      magic8ball();
   });            
-});            
+});  
+
+shake.startWatch(magic8ball(), 40);
+
+function magic8ball(){
+    var q = $('#questionText').val();
+    r= random();
+    navigator.notification.alert(a[r]);
+    if(a_outlook[r]>0){
+        //good
+        navigator.notification.beep(1);
+    }else if(a_outlook[r]<0){
+        //bad
+        navigator.vibrate(200);
+    }else{
+        //neutral
+        navigator.notification.beep(1);
+        navigator.vibrate(200);
+    } 
+}
 
 function random(){
 	return Math.floor(Math.random()*20);
