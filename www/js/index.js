@@ -1,16 +1,14 @@
 <!-- For more info on jQuery Mobile,  touch gestures and other useful events see : http://api.jquerymobile.com/category/events/ -->
 
+var m;
+
 $(document).on("pagecreate","#pageone",function(){
-  $('#submitButton').on("click", function(){
-    submit();
+  $('#rnButton').on("click", function(){
+      m = random();
+      console.log(m);
   });            
 });            
 
-function submit(){
-	var name = $('#nameText').val();
-	var email = $('#emailText').val(); 
-	var telephone = $('#telNumb').val();
-	var dob = $('#dobDate').val();
-	var password =$('#pasHidden').val();
-
+function random(){
+	return !Math.round(Math.random());
 }
