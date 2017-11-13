@@ -29,7 +29,6 @@ var a = [
 $(document).on("pagecreate","#pageone",function(){
   $('#submitButton').on("click", function(){
       var q = $('#questionText').val();
-      $('#questionAsked').text(q);
       navigator.notification.alert(a[random()]);
   });            
 });            
