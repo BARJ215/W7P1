@@ -12,13 +12,19 @@
 
 <div data-role="page" id="pageone">
   <div data-role="header">
-    <h1>Section 1</h1>
+    <h1>Section 2 - Magic 8 Ball</h1>
   </div>
 
   <div data-role="main" class="ui-content">
-      <p>Generated: <span id="rn"></span></p>
-	  <button id="rnButton">RANDOM BOOLEAN</button>
- 
+      <label for="questionText">Ask a Question:</label>
+	  <input type="text" name="questionText" id="questionText" value=""/>
+	  <button id="submitButton">SUBMIT</button>
+        
+      <p>Question:<br>
+        <span id="questionAsked"></span>
+        <br>Answer:<br>
+        <span id="answer"></span>
+      </p>
   </div>
   
   
